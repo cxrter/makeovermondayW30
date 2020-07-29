@@ -44,30 +44,31 @@ var svg = d3.select("#my_viz")
           "translate(" + margin.left + "," + margin.top + ")")
 
   // Add Title
-  var hover_label = svg.append('text')
+  var title = svg.append('text')
     .attr("transform",  "translate(50,-80)")
     .attr('text-anchor', 'start')
     .attr('alignment-baseline', 'middle')
     .attr('fill', 'white')
-    .style('font-size', '3vw')
+    .style('font-size', '3em')
     .text('Women in Power');
 
     // Add Subtitle
-  var hover_label = svg.append('text')
+  var subtitle = svg.append('text')
     .attr("transform",  "translate(50,-40)")
     .attr('text-anchor', 'start')
     .attr('alignment-baseline', 'middle')
     .attr('fill', 'lightgrey')
-    .style('font-size', '1vw')
+    .style('font-size', '1em')
     .text('The proportion of seats held by women in national parliaments is changing');
 
+
     // Add Signature
-  var hover_label = svg.append('text')
+  var sig = svg.append('text')
     .attr("transform",  "translate("+width+","+(height+140)+")")
     .attr('text-anchor', 'end')
     .attr('alignment-baseline', 'middle')
     .attr('fill', 'lightgrey')
-    .style('font-size', '1vw')
+    .style('font-size', '1em')
     .text('Viz by @annacxrter | July 2020');
 
 
@@ -77,7 +78,7 @@ var selected;
 
 
 //Read the data
-d3.csv("w30-data.csv", function(data) {
+d3.csv("../w30-data.csv", function(data) {
 
 
 var filtered_data = data.filter(function(d){
@@ -116,11 +117,12 @@ var y = d3.scaleLinear()
     svg.selectAll(".domain").remove()
 
 var timeLabel = svg.append("text")
-    .attr("y", -50)
+    .attr("y", -80)
     .attr("x", width - 40)
     .attr("font-size", "3em")
     .attr("opacity", "0.8")
     .attr("text-anchor", "end")
+    .attr('alignment-baseline', 'middle')
     .style('fill', '#f5f5f5')
     .text("1997");
 
