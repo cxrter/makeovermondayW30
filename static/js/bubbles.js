@@ -78,7 +78,7 @@ var selected;
 
 
 //Read the data
-d3.csv("../w30-data.csv", function(data) {
+d3.csv("w30-data.csv", function(data) {
 
 
 var filtered_data = data.filter(function(d){
