@@ -6,11 +6,11 @@ axis line{
 
 .axis text{
   fill: lightgrey;
-  font-size: 1vw;
+  font-size: 1.5em;
 }
 
 .yaxis text{
-  font-size: 1vw;
+  font-size: 1.5em;
   color:grey;
 }
 
